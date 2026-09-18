@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wordle Клон</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ВОРДЛИ</h1>
+        <button id="stats-btn" aria-label="Статистика">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path fill="var(--text-color)" d="M16 11V3H8v6H2v12h20V11h-6zm-6-6h4v14h-4V5zm-6 6h4v8H4v-8zm16 8h-4v-6h4v6z"></path>
+            </svg>
+        </button>
+    </header>
+
+    <div id="toast-container"></div>
+
+    <div id="game-container">
+        <div id="board-container">
+            <div id="board"></div>
+        </div>
+        <div id="keyboard-container"></div>
+    </div>
+
+    <div id="stats-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <h2>СТАТИСТИКА</h2>
+            <div class="stats-grid">
+                <div class="stat-item"><span id="stat-played">0</span><div>Сыграно</div></div>
+                <div class="stat-item"><span id="stat-winpct">0</span><div>% Побед</div></div>
+                <div class="stat-item"><span id="stat-streak">0</span><div>Текущая серия</div></div>
+                <div class="stat-item"><span id="stat-maxstreak">0</span><div>Макс. серия</div></div>
+            </div>
+            <button id="play-again-btn" class="hidden">СЫГРАТЬ ЕЩЕ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
